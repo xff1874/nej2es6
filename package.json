@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run":"npx babel-node src/trans.js"
+    "start":"npx babel-node src/trans.js",
+    "debug":"npx babel-node --inspect-brk src/trans.js"
   },
   "author": "",
   "license": "ISC",

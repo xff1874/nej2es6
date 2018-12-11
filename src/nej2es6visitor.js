@@ -1,7 +1,9 @@
 import generate from "@babel/generator";
-var babel = require('@babel/core');
-var template = require("@babel/template");
-debugger;
+import babel from "@babel/core";
+import template from "@babel/template";
+// var babel = require('@babel/core');
+// var template = require("@babel/template");
+// debugger;
 
 var buildImport = template.smart(
   `var IMPORT_NAME = require(SOURCE); `
