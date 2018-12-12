@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"npx babel-node src/trans.js",
-    "debug":"npx babel-node --inspect-brk src/trans.js"
+    "start": "npx babel-node src/trans.js",
+    "debug": "npx babel-node --inspect-brk src/trans.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "@babel/node": "^7.2.0",
     "@babel/preset-env": "^7.2.0",
     "@babel/template": "^7.1.2",
-    "@babel/traverse": "^7.1.6"
+    "@babel/traverse": "^7.1.6",
+    "@babel/types": "^7.2.0"
   }
 }
