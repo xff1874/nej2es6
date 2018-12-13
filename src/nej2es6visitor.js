@@ -7,7 +7,7 @@ module.exports = function(babel) {
     // visitor模式无法返回,所以用了一个参数保留。
     let importList = [];
     let fnbody;
-    const buildImport = template(`var IMPORT_NAME = require(SOURCE); `);
+    const buildImport = template(`import NAME from 'LIB' `);
 
     const importVisitor = {
         Identifier(path) {
@@ -16,8 +16,8 @@ module.exports = function(babel) {
                 let defineFnParams = path.parent.arguments[1].params;
                 for (var i = 0, len = defineList.length; i < len; i++) {
                     var imp = buildImport({
-                        IMPORT_NAME: t.identifier(defineFnParams[i].name), //为什么是identifier,因为ast解析出来就是这个类型。
-                        SOURCE: t.stringLiteral(defineList[i].value)
+                        NAME: t.identifier(defineFnParams[i].name),
+                        LIB: t.stringLiteral(defineList[i].value)
                     });
 
                     importList.push(imp);
